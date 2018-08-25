@@ -13,45 +13,53 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <h1 class="navbar-brand">
+  <nav class="navbar navbar-expand-lg navbar-info bg-info">
+    <h1 class="navbar-brand text-white">
       Big-O Notation Flashcards
     </h1>
   </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-8" id="">
-        <h4 id="name"></h4>
-        <h4 id="category"></h4>
-        <h4 id="performance"></h4>
-      </div>
-      <div class="col-12 col-md-4" id="answers"></div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <h6>Space/Time Complexity Notation Functions</h6>
-        <p>A mathematical function that represent the asymptotic bounds</p>
-        <ul class="inline">
-          <li class="list-inline-item">
-            <a href="https://en.wikipedia.org/wiki/Big_O_notation">
-              Big O - upper
-            </a>
-          </li class="inline">
-          <li class="list-inline-item">
-            <a href="https://en.wikipedia.org/wiki/Big_Omega_function">
-              Big Theta - upper & lower
-            </a>
-          </li class="inline">
-          <li class="list-inline-item">
-            <a href="https://en.wikipedia.org/wiki/Big_Omega_function">
-              Big Omega - lower
-            </a>
-          </li>
-        </ul>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8" id="">
+          <h4 id="name" class="display-6"></h4>
+          <p id="category"class="lead"></p>
+        </div>
       </div>
     </div>
   </div>
+<div class="container">
+  <div class="row">
+    <div id="answers" class="col-12"></div>
+  </div>
+</div>
+  <footer id="footer" class="navbar navbar-expand-lg bg-info">
+    <p class="text-white">A mathematical function that represent the asymptotic bounds</p>
+    <ul class="inline">
+      <li class="list-inline-item">
+        <a href="https://en.wikipedia.org/wiki/Big_O_notation" class="badge badge-light">
+          Big O - Upper Bounds
+        </a>
+      </li class="inline">
+      <li class="list-inline-item">
+        <a href="https://en.wikipedia.org/wiki/Big_Omega_function" class="badge badge-light">
+          Big Theta - Upper & Lower Bounds
+        </a>
+      </li class="inline">
+      <li class="list-inline-item">
+        <a href="https://en.wikipedia.org/wiki/Big_Omega_function" class="badge badge-light">
+          Big Omega - Lower
+        </a>
+      </li>
+      <li class="list-inline-item">
+          <p class="text-white">by <a class="badge badge-warning" href="https://www.github.com/danieldealday">
+            Daniel De Alday
+          </a></p>
+      </li>
+    </ul>
+  </footer>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

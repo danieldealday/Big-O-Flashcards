@@ -8,6 +8,7 @@ $(document).ready(function () {
     "Θ(n log(n))",
     "O(1)",
     "O(n)",
+    "O(k)",
     "O(n+k)",
     "O(nk)",
     "O(log(n))",
@@ -30,11 +31,30 @@ $(document).ready(function () {
       + arr[currentCard].performance
     );
   }
+  function loadAnswers () {
+    answerChoices.forEach(function (item) {
+      var button = $("<button>").attr({
+        type: "button",
+        class: "btn btn-outline-secondary btn-block btn-lg",
+        value: item
+      }).text(item).click(checkSelectedAnswer);
+      $("#answers").append(button);
+    })
+  }
   function checkSelectedAnswer () {
-
+    var selectedAnswer = this.value;
+    console.log(selectedAnswer);
+    console.log(arr[currentCard].bounds);
+    if (selectedAnswer === arr[currentCard].bounds) {
+      alert("Yay!");
+      loadCard();
+    }
+    alert("Aw!");
+    loadCard();
   }
   chooseRandomCard();
   loadCard();
+  loadAnswers();
 
   
 });
