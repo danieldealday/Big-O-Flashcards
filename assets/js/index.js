@@ -6,23 +6,35 @@ $(document).ready(function () {
     "Θ(n)",
     "Θ(log (n))",
     "Θ(n log(n))",
-    
-    "Θ(n^2)",
-    "Θ(n(log(n))^2)",
-    Ω,
+    "O(1)",
+    "O(n)",
+    "O(n+k)",
+    "O(nk)",
+    "O(log(n))",
+    "O(n log(n))",
+    "O(n log(n)^2)",
+    "O(n^2)",
+    "Ω(n)",
+    "Ω(n+k)",
+    "Ω(nk)",
+    "Ω(n^2)",
     "Ω(n log(n))",
   ];
   function chooseRandomCard () {
     currentCard = Math.floor(Math.random() * 175);
   }
   function loadCard () {
-    $("#name").html(JSON.stringify(arr[currentCard].name));
-    $("#category").html(JSON.stringify(arr[currentCard].category));
-    $("#performance").html(JSON.stringify(arr[currentCard].performance));
+    $("#name").text(arr[currentCard].name);
+    $("#category").text(
+      arr[currentCard].category + " - "
+      + arr[currentCard].performance
+    );
   }
   function checkSelectedAnswer () {
 
   }
   chooseRandomCard();
   loadCard();
+
+  
 });
