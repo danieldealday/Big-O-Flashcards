@@ -10,7 +10,7 @@ var arr = [
     category: "Time Complexity",
     performance: "Average",
     theta: "Θ(n)"
-  }
+  },
   {
     name: "Array (Insertion)",
     category: "Time Complexity",
