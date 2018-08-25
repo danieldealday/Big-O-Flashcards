@@ -1,0 +1,31 @@
+#answers {
+  margin-bottom: 2rem;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-teal {
+  background-color: #008080;
+}
+
+p > a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+p > a:visited {
+  text-decoration: none;
+  color: ##ddd;
+}
+
+p > a:hover {
+  text-decoration: none;
+  color: #FF7E47;
+}
+
+p > a:active {
+  text-decoration: none;
+  color: #ddd;
+}
