@@ -329,5 +329,10 @@ var arr = [
     performance: "Worst",
     theta: "Θ(n log(n))"
   },
-  
+  {
+    name: " (Access)",
+    category: "Time Complexity",
+    performance: "Average",
+    theta: "Θ(n)"
+  },
 ];
