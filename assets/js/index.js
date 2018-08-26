@@ -31,19 +31,15 @@ $(document).ready(function () {
     );
   }
 
-  function modalToggle () {
-    
-  };
-
   async function checkSelectedAnswer () {
     var selectedAnswer = this.value;
     console.log(selectedAnswer);
     console.log(arr[randomIndex].bounds);
     if (selectedAnswer === arr[randomIndex].bounds) {
-      alert("Yay!");
+      alert("Correct \n " + arr[randomIndex].bounds);
       loadCard();
     }
-    alert("Aw!");
+    alert("Incorrect \n " + arr[randomIndex].bounds);
     await modalToggle();
     loadCard();
   }
