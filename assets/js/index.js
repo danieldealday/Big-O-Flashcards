@@ -31,7 +31,11 @@ $(document).ready(function () {
     );
   }
 
-  function checkSelectedAnswer () {
+  function modalToggle () {
+    
+  };
+
+  async function checkSelectedAnswer () {
     var selectedAnswer = this.value;
     console.log(selectedAnswer);
     console.log(arr[randomIndex].bounds);
@@ -40,6 +44,7 @@ $(document).ready(function () {
       loadCard();
     }
     alert("Aw!");
+    await modalToggle();
     loadCard();
   }
 
