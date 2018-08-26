@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var currentCard;
+  var randomIndex;
   var answerChoices = [
     "N/A",
     "Θ(1)",
@@ -21,16 +21,33 @@ $(document).ready(function () {
     "Ω(n^2)",
     "Ω(n log(n))",
   ];
-  function chooseRandomCard () {
-    currentCard = Math.floor(Math.random() * 175);
-  }
+
   function loadCard () {
-    $("#name").text(arr[currentCard].name);
+    randomIndex = Math.floor(Math.random() * 175);
+    $("#name").text(arr[randomIndex].name);
     $("#category").text(
-      arr[currentCard].category + " - "
-      + arr[currentCard].performance
+      arr[randomIndex].category + " - "
+      + arr[randomIndex].performance
     );
   }
+
+  function modalToggle () {
+    
+  };
+
+  async function checkSelectedAnswer () {
+    var selectedAnswer = this.value;
+    console.log(selectedAnswer);
+    console.log(arr[randomIndex].bounds);
+    if (selectedAnswer === arr[randomIndex].bounds) {
+      alert("Yay!");
+      loadCard();
+    }
+    alert("Aw!");
+    await modalToggle();
+    loadCard();
+  }
+
   function loadAnswers () {
     answerChoices.forEach(function (item) {
       var button = $("<button>").attr({
@@ -41,20 +58,8 @@ $(document).ready(function () {
       $("#answers").append(button);
     })
   }
-  function checkSelectedAnswer () {
-    var selectedAnswer = this.value;
-    console.log(selectedAnswer);
-    console.log(arr[currentCard].bounds);
-    if (selectedAnswer === arr[currentCard].bounds) {
-      alert("Yay!");
-      loadCard();
-    }
-    alert("Aw!");
-    loadCard();
-  }
-  chooseRandomCard();
+
   loadCard();
   loadAnswers();
-
   
 });

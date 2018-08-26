@@ -1,3 +1,12 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 16rem;
+  max-width: 85%;
+}
+
 #answers {
   margin-bottom: 2rem;
 }
@@ -10,22 +19,22 @@
   background-color: #008080;
 }
 
-p > a:link {
+p>a:link {
   text-decoration: none;
   color: #fff;
 }
 
-p > a:visited {
+p>a:visited {
   text-decoration: none;
   color: ##ddd;
 }
 
-p > a:hover {
+p>a:hover {
   text-decoration: none;
   color: #FF7E47;
 }
 
-p > a:active {
+p>a:active {
   text-decoration: none;
   color: #ddd;
 }
