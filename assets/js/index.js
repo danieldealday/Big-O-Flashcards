@@ -29,15 +29,13 @@ $(document).ready(function () {
       arr[randomIndex].category + " - "
       + arr[randomIndex].performance
     );
-    var bounds = $("<h1>").attr({
-      margin: "0 auto"
-    }).text(arr[randomIndex].bounds);
+    var bounds = $("<h1>").text(arr[randomIndex].bounds);
     $("#answers").append(bounds);
   }
 
   loadFlashCard();
 
-  $(document).click(function(e) {
+  $("#next").click(function(e) {
     e.preventDefault();
     console.log("CLICKED");
     $("#answers").empty();

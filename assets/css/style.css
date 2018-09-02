@@ -38,3 +38,11 @@ p>a:active {
   text-decoration: none;
   color: #ddd;
 }
+
+footer {
+  margin-top: 2rem;
+}
+
+#next {
+  margin-bottom: 2rem;
+}
