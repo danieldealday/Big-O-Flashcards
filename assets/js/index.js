@@ -22,40 +22,26 @@ $(document).ready(function () {
     "Ω(n log(n))",
   ];
 
-  function loadCard () {
+  function loadFlashCard () {
     randomIndex = Math.floor(Math.random() * 175);
     $("#name").text(arr[randomIndex].name);
     $("#category").text(
       arr[randomIndex].category + " - "
       + arr[randomIndex].performance
     );
+    var bounds = $("<h1>").attr({
+      margin: "0 auto"
+    }).text(arr[randomIndex].bounds);
+    $("#answers").append(bounds);
   }
 
-  async function checkSelectedAnswer () {
-    var selectedAnswer = this.value;
-    console.log(selectedAnswer);
-    console.log(arr[randomIndex].bounds);
-    if (selectedAnswer === arr[randomIndex].bounds) {
-      alert("Correct \n " + arr[randomIndex].bounds);
-      loadCard();
-    }
-    alert("Incorrect \n " + arr[randomIndex].bounds);
-    await modalToggle();
-    loadCard();
-  }
+  loadFlashCard();
 
-  function loadAnswers () {
-    answerChoices.forEach(function (item) {
-      var button = $("<button>").attr({
-        type: "button",
-        class: "btn btn-outline-secondary btn-block btn-lg",
-        value: item
-      }).text(item).click(checkSelectedAnswer);
-      $("#answers").append(button);
-    })
-  }
-
-  loadCard();
-  loadAnswers();
+  $(document).click(function(e) {
+    e.preventDefault();
+    console.log("CLICKED");
+    $("#answers").empty();
+    loadFlashCard();
+  })
   
 });
